@@ -1,11 +1,5 @@
 ﻿@model IEnumerable<ASP.NET_CORE_WEB_APP_MVC_SHOP.Models.Product>
 
-@{
-    ViewData["Title"] = "GetProducts";
-}
-
-<h1>GetProducts</h1>
-
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -26,6 +20,7 @@
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
             </td>
         </tr>

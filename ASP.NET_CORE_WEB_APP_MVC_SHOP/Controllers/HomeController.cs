@@ -19,9 +19,9 @@ namespace ASP.NET_CORE_WEB_APP_MVC_SHOP.Controllers
             _dbContext = dbContext;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await _dbContext.Products.ToListAsync());
         }
 
         public IActionResult Privacy()
